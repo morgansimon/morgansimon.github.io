@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Publications by Chakhung Yeung, academic author name of Morgan Yeung.">
   <title>Publications | Morgan Yeung</title>
+  <link rel="canonical" href="https://morgansimon.github.io/publications.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Publications | Morgan Yeung">
+  <meta property="og:description" content="Journal articles, conference papers, and theses by Chakhung Yeung.">
+  <meta property="og:url" content="https://morgansimon.github.io/publications.html">
   <link rel="icon" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=19">
+  <link rel="stylesheet" href="styles.css?v=20">
 </head>
 <body>
   <header class="site-header">
@@ -115,6 +120,71 @@
       </section>
     </article>
   </main>
+
+  <script>
+    const verifiedPublications = {
+      "Methodology for Fast Impedance Calculation for Twisted Power Cables at High-Frequency via a Multi-Level PEEC Method": {doi: "10.1109/tia.2025.3587190", publisher: "https://ieeexplore.ieee.org/document/11074347/"},
+      "An Accelerated Multi-Time-Scale Solution of Power Systems Under Multiple Lightning Strokes Events": {doi: "10.1109/tpwrd.2025.3559380", publisher: "https://ieeexplore.ieee.org/document/10960330/"},
+      "A Hybrid PEEC and Transmission Line Model for Stable and Accurate Transient Electromagnetic Coupling Simulations Based on Mixed-Potential Scattering": {doi: "10.1016/j.epsr.2026.112926", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S0378779626002191"},
+      "Multi-Dimensional Evaluation and Synergistic Optimization for Double-Circuit Distribution Lines Under Transient Events": {doi: "10.1016/j.ijepes.2025.111153", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S014206152500701X"},
+      "Observed Induced Overvoltage on the Test Overhead Distribution Line Initiated by Natural Lightning Activities": {doi: "10.1109/tia.2025.3599466", publisher: "https://ieeexplore.ieee.org/document/11126984/"},
+      "Lightning Flashover Characteristic and Effective Protection Measures of 10 kV Distribution Line Network": {doi: "10.3390/en18195097", publisher: "https://www.mdpi.com/1996-1073/18/19/5097"},
+      "Optimizing Shielded Cable Lightning Protection: Effects of Grounding and Shielding Under Variable Lightning Surge Conditions": {doi: "10.1109/temc.2025.3649921", publisher: "https://ieeexplore.ieee.org/document/11369783/"},
+      "Transient Induced Response on Cables by Lightning Electromagnetic Pulse With Different Experimental Conditions": {doi: "10.1016/j.epsr.2024.111031", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S0378779624009179"},
+      "Assessment of Electromagnetic Shielding Effectiveness in Multi-Layer and Single-Layer Shielded Cables Against the Lightning Electromagnetic Pulse Considering Different Shielding Strategies": {doi: "10.1016/j.epsr.2025.111514", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S0378779625001063"},
+      "Affection of Shielding Methods on the Characteristics for Cable Coupled to Lightning Impulse Magnetic Field": {doi: "10.1016/j.epsr.2023.109802", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S0378779623006910"},
+      "Lightning Coupling Induced Voltage of Secondary Cables in Substation With Different Terminal Load and Grounding Dissipation Paths": {doi: "10.1109/tia.2025.3546209", publisher: "https://ieeexplore.ieee.org/document/10906532/"},
+      "Lightning Inductive Coupling Characteristics of Parallel Cables: Computation and Measurement Validation": {doi: "10.1049/smt2.12135", publisher: "https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/smt2.12135"},
+      "Multi-Factorial Assessment of Inclined Surface Solar Radiation Using Photovoltaic Data and Solar Radiation Transposition Models: A Case Study in China": {doi: "10.1016/j.energ.2025.100036", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S2950487225000236"},
+      "Comprehensive Analysis of Solar Irradiance and Photovoltaic Power Generation: Case Studies in Wuhan and Zhangbei, China": {doi: "10.1109/tia.2025.3569247", publisher: "https://ieeexplore.ieee.org/document/11002366/"},
+      "Clearness Index Cluster Analysis for Photovoltaic Weather Classification Based on Solar Irradiation Measurement Data: Theory and Application": {doi: "10.1016/j.energ.2024.100010", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S2950487224000102"},
+      "Electric Shock Simulation and Risk Assessment in Low-Voltage Distribution Networks Under Unknown Topology: A Two-Stage Approach Based on Smart Meter Data": {doi: "10.3390/en19112723", publisher: "https://www.mdpi.com/1996-1073/19/11/2723"},
+      "Analysis of Fault Potential Assessment Under Typical Line Faults in a Real Urban Old Community": {doi: "10.1109/tia.2025.3546904", publisher: "https://ieeexplore.ieee.org/document/10908622/"},
+      "Equivalent Wide Bandwidth Transformer Modeling Using a Physics-Consistent Error Compensation Model": {doi: "10.1016/j.ijepes.2025.110817", publisher: "https://linkinghub.elsevier.com/retrieve/pii/S0142061525003655"},
+      "Localization of Multiple Partial Discharge Sources in Air-Insulated Substation Space by RF Antenna Sensors Array": {doi: "10.1109/jsen.2022.3181012", publisher: "https://ieeexplore.ieee.org/document/9797234/"},
+      "多机制主导下复杂电力系统电磁暂态计算的自适应步长策略": {status: "特邀报告"},
+      "Assessment of Overvoltage in Double-Circuit Distribution Lines Caused by Direct Lightning Strokes Under Various Conditions": {doi: "10.1109/apl65034.2025.11108764", publisher: "https://ieeexplore.ieee.org/document/11108764/"},
+      "Research on Solar Irradiance Distribution and Correlation With Photovoltaic Generated Output: A Case Study of Wuhan and Zhangbei, China": {doi: "10.1109/icps60943.2024.10563404", publisher: "https://ieeexplore.ieee.org/document/10563404/"},
+      "Image Recognition Algorithm of Electrical Engineering Equipment Based on Machine Learning Method": {doi: "10.1109/icpeca51329.2021.9362708", publisher: "https://ieeexplore.ieee.org/document/9362708/"},
+      "Indirect Lightning Strike Analysis of Blocking Diodes in a Large-Scale Photovoltaic System": {doi: "10.1109/apl65034.2025.11108897", publisher: "https://ieeexplore.ieee.org/document/11108897/"},
+      "Impedance Calculation of Twisted Cores in Power Lines at High Frequency by a Multi-Level PEEC Method": {doi: "10.1109/cieec60922.2024.10583082", publisher: "https://ieeexplore.ieee.org/document/10583082/"},
+      "Analysis of Fault Potential Assessment Under Typical Line-Fault in a Real Urban Old Community": {doi: "10.1109/icps60943.2024.10563737", publisher: "https://ieeexplore.ieee.org/document/10563737/"},
+      "Lightning Induced Coupling Performance of Secondary Cables in Substation With Different Terminal Load and Surge Injection Position": {doi: "10.1109/icps60943.2024.10563887", publisher: "https://ieeexplore.ieee.org/document/10563887/"},
+      "Observed Induced Overvoltage on the Test Overhead Distribution Line Initiated From Natural Lightning Activities": {doi: "10.1109/icps60943.2024.10563576", publisher: "https://ieeexplore.ieee.org/document/10563576/"},
+      "Simulation Research on Space Charge of High Voltage XLPE Cable Under Different Working Conditions": {doi: "10.1109/tocs56154.2022.10015991", publisher: "https://ieeexplore.ieee.org/document/10015991/"}
+    };
+
+    document.querySelectorAll(".publications-page .pub").forEach((publication) => {
+      const title = publication.querySelector(".pub-title").textContent.trim();
+      const record = verifiedPublications[title];
+      if (!record) return;
+      if (record.status === "特邀报告") publication.lang = "zh-Hans";
+      const actions = document.createElement("p");
+      actions.className = "publication-actions";
+      const status = document.createElement("span");
+      status.className = "publication-status";
+      status.textContent = record.status || "Published";
+      actions.append(status);
+      if (record.doi) {
+        const doi = document.createElement("a");
+        doi.href = `https://doi.org/${record.doi}`;
+        doi.target = "_blank";
+        doi.rel = "noopener noreferrer";
+        doi.textContent = `DOI: ${record.doi}`;
+        actions.append(doi);
+      }
+      if (record.publisher) {
+        const publisher = document.createElement("a");
+        publisher.href = record.publisher;
+        publisher.target = "_blank";
+        publisher.rel = "noopener noreferrer";
+        publisher.textContent = "Publisher";
+        publisher.setAttribute("aria-label", `Publisher page for ${title}`);
+        actions.append(publisher);
+      }
+      publication.append(actions);
+    });
+  </script>
 
   <footer class="site-footer"><div>© Morgan Yeung. <strong><u>Chakhung Yeung</u></strong> identifies the author. <span class="corresponding-mark">*</span> Corresponding author.</div></footer>
 </body>

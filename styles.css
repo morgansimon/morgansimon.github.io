@@ -66,3 +66,6 @@ h2.module-title{
 .thesis-title{font-size:1.03rem}
 .thesis-year{display:inline-block;margin-right:.45rem;padding:.12rem .38rem;background:var(--blue);color:#fff;font-size:.82rem;font-weight:700;line-height:1.15}
 .corresponding-mark{color:var(--blue);font-size:.82em;font-weight:700;margin-left:.08rem}
+:root{--link:var(--blue)}
+a:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.publication-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.45rem;margin:.55rem 0 0;font-size:.84rem;line-height:1.4}.publication-status{display:inline-block;padding:.16rem .42rem;background:var(--pale);border:1px solid #bcd4e0;color:#28617c;font-weight:700}.publication-actions a{font-weight:700}
