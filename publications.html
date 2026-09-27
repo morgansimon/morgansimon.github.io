@@ -64,7 +64,7 @@
       </section>
 
       <section class="section" id="journal">
-        <h2>Journal Articles</h2>
+        <h2 class="section-heading-with-note"><span>Journal Articles</span><span class="section-note"><span class="corresponding-mark">*</span> Corresponding author</span></h2>
         <div class="journal-topics">
           <section class="journal-topic">
             <h3 class="publication-category"><span class="topic-index">01.</span>Electromagnetic Transient Modelling and Accelerated Methods</h3>
@@ -104,7 +104,7 @@
       </section>
 
       <section class="section" id="conference">
-        <h2>Conference Papers</h2>
+        <h2 class="section-heading-with-note"><span>Conference Papers</span><span class="section-note"><span class="corresponding-mark">*</span> Presenting author(s)</span></h2>
         <div class="conference-list">
 <div class="pub"><p class="pub-title">多机制主导下复杂电力系统电磁暂态计算的自适应步长策略</p><p class="author-list"><span class="author-self">杨泽鸿</span>；丁雨轩<sup class="corresponding-mark">*</sup>；杜亚平<sup class="corresponding-mark">*</sup>。<span class="venue">2026年第二届全国电磁前沿交叉技术大会（特邀报告）</span>，2026年9月18日–20日，中国武汉。</p><span class="tag">电磁暂态</span><span class="tag">自适应步长</span><span class="tag">复杂电力系统</span><span class="tag">特邀报告</span></div>
 <div class="pub"><p class="pub-title">Assessment of Overvoltage in Double-Circuit Distribution Lines Caused by Direct Lightning Strokes Under Various Conditions</p><p class="author-list"><span class="author-self">Chakhung Yeung</span>, Yaping Du, Yuxuan Ding, Quan Zhou, Zhentao Du, Lei Jia, Yue Li, Ruihan Qi, Song Zhang, and Huaifei Chen. <span class="venue">2025 13th Asia-Pacific International Conference on Lightning</span>, 2025.</p><span class="tag">Double-Circuit Lines</span><span class="tag">Lightning Overvoltage</span><span class="tag">Surge Arresters</span><span class="tag">Protection Optimisation</span></div>
@@ -154,6 +154,37 @@
       "Simulation Research on Space Charge of High Voltage XLPE Cable Under Different Working Conditions": {doi: "10.1109/tocs56154.2022.10015991", publisher: "https://ieeexplore.ieee.org/document/10015991/"}
     };
 
+    const publicationDetails = {
+      "10.1109/tia.2025.3587190": "January 2026 · Vol. 62, No. 1 · pp. 304–313",
+      "10.1109/tpwrd.2025.3559380": "August 2025 · Vol. 40, No. 4 · pp. 1889–1898",
+      "10.1016/j.epsr.2026.112926": "August 2026 · Vol. 257 · Art. 112926",
+      "10.1016/j.ijepes.2025.111153": "November 2025 · Vol. 172 · Art. 111153",
+      "10.1109/tia.2025.3599466": "January 2026 · Vol. 62, No. 1 · pp. 665–676",
+      "10.3390/en18195097": "September 2025 · Vol. 18, No. 19 · Art. 5097",
+      "10.1109/temc.2025.3649921": "April 2026 · Vol. 68, No. 2 · pp. 302–311",
+      "10.1016/j.epsr.2024.111031": "January 2025 · Vol. 238 · Art. 111031",
+      "10.1016/j.epsr.2025.111514": "June 2025 · Vol. 243 · Art. 111514",
+      "10.1016/j.epsr.2023.109802": "January 2024 · Vol. 226 · Art. 109802",
+      "10.1109/tia.2025.3546209": "July 2025 · Vol. 61, No. 4 · pp. 5971–5982",
+      "10.1049/smt2.12135": "May 2023 · Vol. 17, No. 3 · pp. 115–124",
+      "10.1016/j.energ.2025.100036": "December 2025 · Vol. 4 · Art. 100036",
+      "10.1109/tia.2025.3569247": "November 2025 · Vol. 61, No. 6 · pp. 8307–8317",
+      "10.1016/j.energ.2024.100010": "December 2024 · Vol. 2 · Art. 100010",
+      "10.3390/en19112723": "June 2026 · Vol. 19, No. 11 · Art. 2723",
+      "10.1109/tia.2025.3546904": "July 2025 · Vol. 61, No. 4 · pp. 5808–5818",
+      "10.1016/j.ijepes.2025.110817": "September 2025 · Vol. 170 · Art. 110817",
+      "10.1109/jsen.2022.3181012": "July 2022 · Vol. 22, No. 14 · pp. 14481–14490",
+      "10.1109/apl65034.2025.11108764": "June 2025 · pp. 72–77",
+      "10.1109/icps60943.2024.10563404": "May 2024 · pp. 1–6",
+      "10.1109/icpeca51329.2021.9362708": "January 2021 · pp. 711–714",
+      "10.1109/apl65034.2025.11108897": "June 2025 · pp. 1–6",
+      "10.1109/cieec60922.2024.10583082": "May 2024 · pp. 883–888",
+      "10.1109/icps60943.2024.10563737": "May 2024 · pp. 1–7",
+      "10.1109/icps60943.2024.10563887": "May 2024 · pp. 1–6",
+      "10.1109/icps60943.2024.10563576": "May 2024 · pp. 1–6",
+      "10.1109/tocs56154.2022.10015991": "December 2022 · pp. 391–396"
+    };
+
     document.querySelectorAll(".publications-page .pub").forEach((publication) => {
       const title = publication.querySelector(".pub-title").textContent.trim();
       const record = verifiedPublications[title];
@@ -165,6 +196,13 @@
       status.className = "publication-status";
       status.textContent = record.status || "Published";
       actions.append(status);
+      const detail = publicationDetails[record.doi] || (record.status === "特邀报告" ? "September 18–20, 2026 · Wuhan, China" : "");
+      if (detail) {
+        const metadata = document.createElement("span");
+        metadata.className = "publication-detail";
+        metadata.textContent = detail;
+        actions.append(metadata);
+      }
       if (record.doi) {
         const doi = document.createElement("a");
         doi.href = `https://doi.org/${record.doi}`;
@@ -173,19 +211,10 @@
         doi.textContent = `DOI: ${record.doi}`;
         actions.append(doi);
       }
-      if (record.publisher) {
-        const publisher = document.createElement("a");
-        publisher.href = record.publisher;
-        publisher.target = "_blank";
-        publisher.rel = "noopener noreferrer";
-        publisher.textContent = "Publisher";
-        publisher.setAttribute("aria-label", `Publisher page for ${title}`);
-        actions.append(publisher);
-      }
       publication.append(actions);
     });
   </script>
 
-  <footer class="site-footer"><div>© Morgan Yeung. <strong><u>Chakhung Yeung</u></strong> identifies the author. <span class="corresponding-mark">*</span> Corresponding author.</div></footer>
+  <footer class="site-footer"><div>© Morgan Yeung. <strong><u>Chakhung Yeung</u></strong> identifies the author.</div></footer>
 </body>
 </html>
