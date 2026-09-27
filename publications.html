@@ -11,7 +11,7 @@
   <meta property="og:description" content="Journal articles, conference papers, and theses by Chakhung Yeung.">
   <meta property="og:url" content="https://morgansimon.github.io/publications.html">
   <link rel="icon" href="assets/favicon.svg">
-  <link rel="stylesheet" href="styles.css?v=21">
+  <link rel="stylesheet" href="styles.css?v=22">
 </head>
 <body>
   <header class="site-header">
@@ -104,7 +104,7 @@
       </section>
 
       <section class="section" id="conference">
-        <h2 class="section-heading-with-note"><span>Conference Papers</span><span class="section-note"><span class="corresponding-mark">*</span> Presenting author(s)</span></h2>
+        <h2 class="section-heading-with-note"><span>Conference Papers</span><span class="section-note"><span class="presenting-mark">*</span> Presenting author</span></h2>
         <div class="conference-list">
 <div class="pub"><p class="pub-title">多机制主导下复杂电力系统电磁暂态计算的自适应步长策略</p><p class="author-list"><span class="author-self">杨泽鸿</span>；丁雨轩<sup class="corresponding-mark">*</sup>；杜亚平<sup class="corresponding-mark">*</sup>。<span class="venue">2026年第二届全国电磁前沿交叉技术大会（特邀报告）</span>，2026年9月18日–20日，中国武汉。</p><span class="tag">电磁暂态</span><span class="tag">自适应步长</span><span class="tag">复杂电力系统</span><span class="tag">特邀报告</span></div>
 <div class="pub"><p class="pub-title">Assessment of Overvoltage in Double-Circuit Distribution Lines Caused by Direct Lightning Strokes Under Various Conditions</p><p class="author-list"><span class="author-self">Chakhung Yeung</span>, Yaping Du, Yuxuan Ding, Quan Zhou, Zhentao Du, Lei Jia, Yue Li, Ruihan Qi, Song Zhang, and Huaifei Chen. <span class="venue">2025 13th Asia-Pacific International Conference on Lightning</span>, 2025.</p><span class="tag">Double-Circuit Lines</span><span class="tag">Lightning Overvoltage</span><span class="tag">Surge Arresters</span><span class="tag">Protection Optimisation</span></div>
@@ -212,6 +212,22 @@
         actions.append(doi);
       }
       publication.append(actions);
+    });
+
+    const nonPresentingAuthors = new Set([
+      "Analysis of Fault Potential Assessment Under Typical Line-Fault in a Real Urban Old Community",
+      "Observed Induced Overvoltage on the Test Overhead Distribution Line Initiated From Natural Lightning Activities"
+    ]);
+    document.querySelectorAll("#conference .pub").forEach((publication) => {
+      publication.querySelectorAll(".corresponding-mark, .presenting-mark").forEach((mark) => mark.remove());
+      const title = publication.querySelector(".pub-title").textContent.trim();
+      const self = publication.querySelector(".author-self");
+      if (self && !nonPresentingAuthors.has(title)) {
+        const mark = document.createElement("sup");
+        mark.className = "presenting-mark";
+        mark.textContent = "*";
+        self.after(mark);
+      }
     });
   </script>
 
